@@ -45,7 +45,7 @@ async def rate_limit(request: Request, call_next):
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[ALLOWED_ORIGIN],
+    allow_origins=["*"],
     allow_credentials=False,
     allow_methods=["GET", "OPTIONS"],
     allow_headers=["X-Request-ID", "X-Client-Id", "Content-Type"],
